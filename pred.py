@@ -58,6 +58,6 @@ def predict_1_hour():
     y_pred = gb_regressor.predict(X_test)
     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
     if rmse <= 200:
-        return f"Hourly close price prediction: {predicted_price[0]}\nLast closing price: {check_price}\nPredicted ratio diff. from the last closing price: {round((predicted_price[0] / check_price ) - 1, 3)}" 
+        return f"Hourly close price prediction: {round(predicted_price[0], 2)}$\nLast closing price: {round(check_price, 2)}$\nPredicted ratio diff. from the last closing price: {round((predicted_price[0] / check_price ) - 1, 3)}" 
     else:
         return "RMSE"

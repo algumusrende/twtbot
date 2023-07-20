@@ -15,7 +15,7 @@ def main():
         )
     if predicted_price != "RMSE":
         response = client.create_tweet(
-            text=predicted_price
+            text=f"My BTC Price Predictions for the next hour ! 🚀 \n\n{predicted_price}\n\n* These predictions are NOT Financial Advice!!! Just for Fun 😎"
         )
 
 main()
